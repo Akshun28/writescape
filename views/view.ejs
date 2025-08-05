@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+<div class="panel-bar">
+<div id="options" style="min-height: 100vh;">
+        <ul class="options-bar">
+            <li class="option"><a class="nounderline" href="/create">Create</a></li>
+            <li class="option"><a class="nounderline" href="/view">View</a></li>
+            <li class="option"><a class="nounderline" href="/update">Update</a></li>
+            <li class="option"><a class="nounderline" href="/delete">Delete</a></li>
+        </ul>
+</div>
+<div style="height: 100%;">
+<form class="search-form" action="/search" method="post">
+    <input class="search-box" type="text" placeholder="Search Here" name="Searched">
+    <input class="submit-button" type="submit" value="Search">
+</form>
+<h2 style="margin-left: 50px;">Welcome, Here's the list of all the blogs! Happy Reading!</h2>
+            <% if(files.length>0){ %>
+            <%    for(var i = 0;i<files.length;i++){ %>
+                    <ul style="margin-left: 50px;">  
+                    <% let fName = files[i].replace(/_/g," "); %>
+                    <li><a href=<%=files[i]%> class="nounderline" style="color: #222601; font-size: 1.5rem"> <%= fName %></a></li>
+                    </ul> 
+            <%    } %>
+            <%}else{%>
+                <h3 style="margin-left: 50px;">Uh oh! You do not have any blogs! <a href="/create">Start Creating!</a></h3>
+            <%}%>
+</div>
+</div>
+<%- include("partials/footer.ejs") %>

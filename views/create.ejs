@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") %>
+<h1 class="head-create create">Create</h1>
+<p class="create">Start creating your blogs on BlogSpot.com with the tools provided, and make your writing journey easy!</p>
+<form class="form" action="/submit" method="POST">
+    <div class="button-container"><input class="title" type="text" placeholder="Enter Title" name="title"></div>
+    <textarea class="type-box" type="text" name="Blog" placeholder="Start Typing"></textarea>
+    <div class="button-container"><input class="submit-button" type="submit" value="submit"></div>
+</form>
+<%- include("partials/footer.ejs") %>

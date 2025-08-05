@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title-display{
+            background-color: #73020290;
+            width: 80vh;
+            text-align: center;
+            color: #F0F2DC;
+            font-size: 2rem;
+            height: auto;
+            padding: 10px;
+        }
+        .form{
+            display: grid;
+             grid-template-rows: auto auto auto;
+             justify-content: center;
+             align-items: center;
+        }.button-container{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+        .submit-button{
+    width: 60px;
+    height: 36px;
+    background-color: #730202;
+    color: #F0F2DC;
+    margin-bottom: 20px;
+} .text-page{
+    height: 100vh;
+    background-color: #BF5D5460;
+    margin: 50px;
+    overflow: scroll;
+    width: 100vh;
+}
+body{
+    margin: 0px;
+    background-color: #F0F2DC;
+}
+
+#navbar{
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 0;
+    background-color: #0D0D0D;
+    padding-bottom: 5px;
+    justify-content:center;
+    align-items: center;
+}
+
+#brand-name{
+    font-size: 2.5rem;
+    font-family: "Sour Gummy", sans-serif;
+    margin-left: 15px;
+    color: #F0F2DC;
+}
+
+.nav-item{
+    color: #F0F2DC;
+    text-decoration: none;
+}
+
+#sure,.success-delete{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.footer{
+    background-color: #0D0D0D;
+    color: #F0F2DC;
+    padding: 3px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+            <div id="brand-name">BlogSpot</div>
+            <div><a class="nav-item home" href="/home">Home</a></div>
+            <div><a class="nav-item about" href="/about">About</a></div>
+            <div><a class="nav-item contact" href="/contact">Contact</a></div>
+            <div><a class="nav-item donate" href="/donate">Donate</a></div>
+    </div>
+
+<a href="/delete" style="text-decoration: none;"><div class="success-delete"><h2 class="title-display">"<%= title_delete %>" has been successfully deleted!</h2></div></a>
+<footer>
+    <div class="footer">
+        <p >© Wriescape 2025</p>
+    </div>
+</footer>
+<!-- <%- include("partials/footer.ejs") %> -->
