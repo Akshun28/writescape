@@ -5,7 +5,7 @@ import fs from "fs";
 import * as cheerio from "cheerio";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 let noOfFile = 1;
 let arrayOfFiles = [];
 
